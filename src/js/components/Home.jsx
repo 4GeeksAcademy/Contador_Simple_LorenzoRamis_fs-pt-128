@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -20,9 +20,8 @@ export const Home = ({ contador }) => {
 		<>
 		<div className="container">
 			<Digitos digitos={digitos} />
-			<Btn />
+			<Btn/>
 		</div>
 		</>
 	);
 };
-

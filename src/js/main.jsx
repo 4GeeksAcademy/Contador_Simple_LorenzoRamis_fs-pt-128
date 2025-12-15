@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from "react";
 import ReactDOM from 'react-dom/client'
 
 //Bootstrap
@@ -15,10 +15,18 @@ let contador = 0;
 
 const renderReact = ReactDOM.createRoot(document.getElementById('root'))
 
-setInterval(() => {
+const interval = () =>{
+    
+    setInterval(() => {
  
     renderReact.render(
         <Home contador={contador} />
     )
     contador++;
 }, 1000)
+
+}
+
+clearInterval(interval())
+
+interval();
