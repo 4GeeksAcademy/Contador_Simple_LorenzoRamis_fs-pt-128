@@ -15,8 +15,6 @@ let contador = 0;
 
 const renderReact = ReactDOM.createRoot(document.getElementById('root'))
 
-const interval = () =>{
-    
     setInterval(() => {
  
     renderReact.render(
@@ -25,8 +23,6 @@ const interval = () =>{
     contador++;
 }, 1000)
 
-}
 
-clearInterval(interval())
 
-interval();
+
