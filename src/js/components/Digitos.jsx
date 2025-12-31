@@ -1,45 +1,4 @@
 export const Digitos = ({ digitos }) => {
-
-    // if (digitos.decenas <= 9) {
-    //     digitos.decenas = 0
-    // }
-
-    // if (digitos.decenas >= 10) {
-    //     digitos.decenas = Math.floor(digitos.decenas / 10)
-    // }
-
-    // if (digitos.centenas <= 99) {
-    //     digitos.centenas = 0
-    // }
-
-    // if (digitos.centenas >= 100) {
-    //     digitos.centenas = Math.floor(digitos.centenas / 100)
-    // }
-
-    // if (digitos.millar <= 999) {
-    //     digitos.millar = 0
-    // }
-
-    // if (digitos.millar >= 1000) {
-    //     digitos.millar = Math.floor(digitos.millar / 1000)
-    // }
-
-    // if (digitos.decenasMillar <= 9999) {
-    //     digitos.decenasMillar = 0
-    // }
-
-    // if (digitos.decenasMillar >= 10000) {
-    //     digitos.decenasMillar = Math.floor(digitos.decenasMillar / 10000)
-    // }
-
-    // if (digitos.centenasMillar <= 99999) {
-    //     digitos.centenasMillar = 0
-    // }
-
-    // if (digitos.centenasMillar >= 100000) {
-    //     digitos.centenasMillar = Math.floor(digitos.centenasMillar / 100000)
-    // }
-
     return (
         <>
             <div className="container text-center mt-2">

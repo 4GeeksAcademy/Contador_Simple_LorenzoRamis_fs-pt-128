@@ -1,11 +1,25 @@
-import React,{useState} from "react";
+import React, { useState, useEffect } from "react";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 import { Digitos } from "./Digitos";
 import { Btn } from "./Btn";
 //create your first component
-export const Home = ({ contador }) => {
+export const Home = () => {
+
+	const [contador, setContador] = useState(0)
+	const [pausar, setpausar] = useState(false)
+
+	useEffect(() => {
+		if (pausar) return
+		const conteo = setInterval(() => {
+			setContador(c => c + 1)
+		}, 1000)
+		return () => clearInterval(conteo)
+	}, [pausar])
+
+	const togglePausar = () => setpausar(p => !p)
+	const reset = () => { setContador(0); setpausar(false) }
 
 	const digitos = {
 		unidades: contador % 10,
@@ -18,10 +32,9 @@ export const Home = ({ contador }) => {
 
 	return (
 		<>
-		<div className="container">
-			<Digitos digitos={digitos} />
-			<Btn/>
-		</div>
+			<div className="container">
+				<Digitos digitos={digitos} />
+				<Btn pausar={pausar} togglePausar={togglePausar} reset={reset} /></div>
 		</>
 	);
 };
